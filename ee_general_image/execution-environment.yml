@@ -1,5 +1,5 @@
 ---
-version: 1.3
+version: 1.4
 
 build_arg_defaults:
   EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-20-early-access/ee-minimal-rhel8:latest'
@@ -10,5 +10,5 @@ dependencies:
   system: bindep.txt
 
 additional_build_steps:
-  prepend: |
-    RUN pip3 install --upgrade pip setuptools ansible-lint
+  append:
+    - RUN pip3 install ansible-lint
