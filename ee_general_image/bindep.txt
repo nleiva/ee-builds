@@ -1,1 +1,2 @@
 git
+python38-devel [platform:rpm compile]

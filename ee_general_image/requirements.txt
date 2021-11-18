@@ -1,12 +1,2 @@
 pyats[full]
 sendgrid==1.6.22
-ansible-pylibssh>=0.2.0
-boto>=2.49.0
-boto3>=1.15.0
-botocore>=1.18.0
-jxmlease
-ncclient
-netaddr
-paramiko
-scp
-xmltodict
