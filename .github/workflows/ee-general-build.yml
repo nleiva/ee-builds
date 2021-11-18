@@ -22,7 +22,7 @@ jobs:
   call-deploy-workflow:
     uses:  nleiva/ee-builds/.github/workflows/deploy.yml@master
     with:
-      EE_FOLDER_NAME: 'ee-general-image'
+      EE_FOLDER_NAME: 'ee_general_image'
       EE_IMAGE_TAG: 'latest'
       QUAY_USER: 'nleiva'
     secrets:
