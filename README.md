@@ -1,5 +1,6 @@
 # Build Execution Environments with `ansible-builder`
 
+[![.github/workflows/ee-general-build.yml](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml)
 
 
 ## Useful Documentation and Links
