@@ -1,2 +1,3 @@
-pyats[full]
+pyats[library]
+genie
 sendgrid==1.6.22
