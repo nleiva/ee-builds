@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - 'ee_general_image/**'
+      - 'ee-general-image/**'
 
   # Schedule workflow run at 00:00 on Sunday
   schedule:
@@ -22,7 +22,7 @@ jobs:
   call-deploy-workflow:
     uses:  nleiva/ee-builds/.github/workflows/deploy.yml@master
     with:
-      EE_FOLDER_NAME: 'ee_general_image'
+      EE_FOLDER_NAME: 'ee-general-image'
       EE_IMAGE_TAG: 'latest'
       QUAY_USER: 'nleiva'
     secrets:
