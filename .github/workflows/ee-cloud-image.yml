@@ -1,5 +1,5 @@
 # Workflow Name
-name: Web EE build
+name: Cloud EE build
 
 # Controls when the workflow will run
 on:
@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - 'ee-web-image/**'
+      - 'ee-cloud-image/**'
 
   # Schedule workflow run at 00:00 on Sunday
   schedule:
@@ -22,7 +22,7 @@ jobs:
   call-deploy-workflow:
     uses:  nleiva/ee-builds/.github/workflows/deploy.yml@master
     with:
-      EE_FOLDER_NAME: 'ee-web-image'
+      EE_FOLDER_NAME: 'ee-cloud-image'
       EE_IMAGE_TAG: 'latest'
       QUAY_USER: 'nleiva'
     secrets:
