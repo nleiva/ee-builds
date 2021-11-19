@@ -1,7 +1,12 @@
 # Build Execution Environments with `ansible-builder`
 
-[![General EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee_general-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee_general-build.yml)
+[![General EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml) [![Cloud EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml) [![Web EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml)
 
+## Inspect an image
+
+```bash
+podman run -it quay.io/nleiva/ee-general-image /bin/bash
+```
 
 ## Useful Documentation and Links
 - [Ansible Automation Platform](https://www.ansible.com/products/automation-platform)
