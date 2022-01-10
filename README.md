@@ -1,6 +1,6 @@
 # Build Execution Environments with `ansible-builder`
 
-[![General EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml) [![Cloud EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml) [![Web EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml)
+[![General EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-general-build.yml) [![Cloud EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-cloud-image.yml) [![Web EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-web-image.yml) [![Controller EE build](https://github.com/nleiva/ee-builds/actions/workflows/ee-controller-build.yml/badge.svg)](https://github.com/nleiva/ee-builds/actions/workflows/ee-controller-build.yml)
 
 ## Inspect an image
 
