@@ -1,5 +1,5 @@
 # Workflow Name
-name: Web EE build
+name: Network EE build
 
 # Controls when the workflow will run
 on:
