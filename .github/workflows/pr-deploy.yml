@@ -1,5 +1,5 @@
 # Workflow name
-name: EE build
+name: Private EE build
 
 # Controls when the workflow will run
 on:
