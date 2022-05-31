@@ -1,0 +1,13 @@
+collections:
+    - name: community.general
+      version: 5.0.0
+    - name: check_point.mgmt
+      version: 2.3.0
+    - name: cisco.asa
+      version: 2.4.0
+    - name: cisco.ise
+      version: 2.4.0
+    - name: ansible.netcommon
+      version: 3.0.0
+    - name: f5networks.f5_modules
+      version: 1.16.0
