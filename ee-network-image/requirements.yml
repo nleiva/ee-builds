@@ -1,13 +1,13 @@
 collections:
     - name: community.general
-      version: 5.0.0
+      version: 5.0.1
     - name: cisco.ios
-      version: 3.0.0
+      version: 3.1.0
     - name: cisco.nxos
       version: 3.0.0
     - name: cisco.iosxr
       version: 3.0.0
     - name: ansible.netcommon
-      version: 3.0.0
+      version: 3.0.1
     - name: arista.eos
       version: 5.0.0
