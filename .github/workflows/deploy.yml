@@ -56,7 +56,7 @@ jobs:
       - name: Install python requirements (ansible-builder)
         run: |
           pip install -r requirements.txt \
-          apt-get -y install podman
+          apt-get install podman
 
       - name: Log in to registry.redhat.io
         id: registry-redhat
