@@ -53,12 +53,17 @@ jobs:
       #   id: buildx
       #   uses: docker/setup-buildx-action@v2
         
-      - name: Update packages (ansible-builder)
+      # - name: Update packages
+      #   run: |
+      #     pip install --upgrade pip
+      #     pip install -r requirements.txt
+      #     sudo apt-get update -y -qq
+      #     sudo apt-get install -y podman
+
+      - name: Install Python packages
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          sudo apt-get update -y -qq
-          sudo apt-get install -y podman
 
       - name: Log in to registry.redhat.io
         id: registry-redhat
@@ -72,6 +77,7 @@ jobs:
         id: build-image
         working-directory: ${{ inputs.EE_FOLDER_NAME }}
         run: |
+          ansible-builder build --container-runtime docker
           ansible-builder build \
           --tag=${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }}
 
