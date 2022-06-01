@@ -10,5 +10,7 @@ dependencies:
   system: bindep.txt
 
 additional_build_steps:
+  prepend: |
+    RUN pip3 install --upgrade pip
   append:
-    - RUN pip3 install ansible-lint
+    - RUN pip3 install --upgrade cryptography lxml ansible-lint

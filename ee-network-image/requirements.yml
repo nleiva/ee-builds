@@ -11,3 +11,5 @@ collections:
       version: 3.0.1
     - name: arista.eos
       version: 5.0.0
+    - name: ansible.posix
+      version: 1.4.0
