@@ -44,17 +44,17 @@ jobs:
       # In this job, all steps begin with a name
       - name: Checkout repo
         uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v2
+      
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
         
       - name: Install python requirements (ansible-builder)
         run: pip install -r requirements.txt
-
-      - name: Log in to quay.io
-        id: registry-quay
-        uses: redhat-actions/podman-login@v1
-        with:
-          registry: quay.io
-          username: ${{ inputs.QUAY_USER }}
-          password: ${{ secrets.QUAY_PASSWORD }}
 
       - name: Log in to registry.redhat.io
         id: registry-redhat
@@ -70,7 +70,15 @@ jobs:
         run: |
           ansible-builder build \
           --tag=${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }}
-           
+
+      - name: Log in to quay.io
+        id: registry-quay
+        uses: redhat-actions/podman-login@v1
+        with:
+          registry: quay.io
+          username: ${{ inputs.QUAY_USER }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+
       - name: Push To quay.io
         id: push-to-quay
         uses: redhat-actions/push-to-registry@v2
@@ -79,8 +87,7 @@ jobs:
           tags: |
             ${{ inputs.EE_IMAGE_TAG }}
           registry: quay.io/${{ inputs.QUAY_USER }}/
-          username: ${{ inputs.QUAY_USER }}
-          password: ${{ secrets.QUAY_PASSWORD }} 
 
-      - name: Print image url
-        run: echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
+      - name: Print image URL
+        run: |
+          echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
