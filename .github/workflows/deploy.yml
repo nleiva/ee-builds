@@ -77,8 +77,7 @@ jobs:
         id: build-image
         working-directory: ${{ inputs.EE_FOLDER_NAME }}
         run: |
-          ansible-builder build --container-runtime docker
-          ansible-builder build \
+          ansible-builder build --container-runtime docker \
           --tag=${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }}
 
       - name: Log in to quay.io
