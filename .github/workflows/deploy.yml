@@ -53,10 +53,12 @@ jobs:
       #   id: buildx
       #   uses: docker/setup-buildx-action@v2
         
-      - name: Install python requirements (ansible-builder)
+      - name: Update packages (ansible-builder)
         run: |
-          pip install -r requirements.txt \
-          apt-get install podman
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          sudo apt-get update -y -qq
+          sudo apt-get install -y podman
 
       - name: Log in to registry.redhat.io
         id: registry-redhat
