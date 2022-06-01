@@ -45,16 +45,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Set up QEMU
-        id: qemu
-        uses: docker/setup-qemu-action@v2
+      # - name: Set up QEMU
+      #   id: qemu
+      #   uses: docker/setup-qemu-action@v2
       
-      - name: Set up Docker Buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v2
+      # - name: Set up Docker Buildx
+      #   id: buildx
+      #   uses: docker/setup-buildx-action@v2
         
       - name: Install python requirements (ansible-builder)
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt \
+          sudo apt-get -y update podman
 
       - name: Log in to registry.redhat.io
         id: registry-redhat
