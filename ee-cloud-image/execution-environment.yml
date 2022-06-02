@@ -14,5 +14,5 @@ additional_build_steps:
     RUN pip3 install --upgrade pip
   append:
     - RUN pip3 install --upgrade ansible-lint
-    - RUN pip3 install -r /usr/share/ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
+    - RUN pip3 install azure-mgmt-monitor==0.5.2
 
