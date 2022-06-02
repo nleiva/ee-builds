@@ -1,8 +1,8 @@
 ---
-version: 1.6
+version: 1.7
 
 build_arg_defaults:
-  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-21/ee-minimal-rhel8'
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
 
 dependencies:
   galaxy: requirements.yml
@@ -13,4 +13,4 @@ additional_build_steps:
   prepend: |
     RUN pip3 install --upgrade pip
   append:
-    - RUN pip3 install --upgrade cryptography lxml ansible-lint
+    - RUN pip3 install --upgrade ansible-lint
