@@ -1,5 +1,5 @@
 ---
-version: 1.6
+version: 1.7
 
 build_arg_defaults:
   EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
@@ -14,3 +14,5 @@ additional_build_steps:
     RUN pip3 install --upgrade pip
   append:
     - RUN pip3 install --upgrade ansible-lint
+    - RUN pip3 install -r /usr/share/ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
+
