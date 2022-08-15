@@ -15,3 +15,7 @@ collections:
       version: 3.0.1
     - name: ansible.posix
       version: 1.4.0
+    - name: nleiva.capirca_acl
+      version: 0.2.4
+    - name: nleiva.inventory
+      version: 1.0.5
