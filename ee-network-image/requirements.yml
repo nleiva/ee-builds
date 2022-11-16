@@ -19,3 +19,5 @@ collections:
       version: 0.2.4
     - name: nleiva.inventory
       version: 1.0.5
+    - name: cisco.meraki
+      version: 2.11.0
