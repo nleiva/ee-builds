@@ -9,6 +9,8 @@ dependencies:
   python: requirements.txt
   system: bindep.txt
 
+ansible_config: '../ansible.cfg'
+
 additional_build_steps:
   prepend: |
     RUN pip3 install --upgrade pip

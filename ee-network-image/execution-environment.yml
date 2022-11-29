@@ -4,7 +4,7 @@ version: 2.0
 build_arg_defaults:
   EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
 
-ansible_config: 'ansible.cfg'
+ansible_config: '../ansible.cfg'
 
 dependencies:
   galaxy: requirements.yml
