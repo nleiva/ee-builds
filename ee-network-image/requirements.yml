@@ -1,19 +1,19 @@
 collections:
-    - name: community.general
-      version: 6.0.1
-    - name: cisco.ios
-      version: 4.1.0
-    - name: cisco.nxos
-      version: 4.0.0
-    - name: cisco.iosxr
-      version: 4.0.2
-    - name: ansible.netcommon
-      version: 4.1.0
-    - name: arista.eos
-      version: 6.0.0
-    - name: junipernetworks.junos
-      version: 4.0.0
-    - name: ansible.posix
-      version: 1.4.0
-    - name: cisco.meraki
-      version: 2.11.0
+  - name: community.general
+    version: 6.0.1
+  - name: cisco.ios
+    version: 4.1.0
+  - name: cisco.nxos
+    version: 4.0.0
+  - name: cisco.iosxr
+    version: 4.0.2
+  - name: ansible.netcommon
+    version: 4.1.0
+  - name: arista.eos
+    version: 6.0.0
+  - name: junipernetworks.junos
+    version: 4.0.0
+  - name: ansible.posix
+    version: 1.4.0
+  - name: cisco.meraki
+    version: 2.11.0
