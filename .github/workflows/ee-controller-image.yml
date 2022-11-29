@@ -20,7 +20,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-deploy-workflow:
-    uses:  nleiva/ee-builds/.github/workflows/pr-deploy.yml@master
+    uses:  nleiva/ee-builds/.github/workflows/deploy.yml@master
     with:
       EE_FOLDER_NAME: 'ee-controller-image'
       EE_IMAGE_TAG: 'latest'
