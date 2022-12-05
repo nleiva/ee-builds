@@ -1,8 +1,8 @@
 ---
-version: 1.10
+version: 2.0
 
 build_arg_defaults:
-  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:2.13.0'
 
 ansible_config: '../ansible.cfg'
 
