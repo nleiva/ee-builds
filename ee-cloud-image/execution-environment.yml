@@ -2,7 +2,7 @@
 version: 1.8
 
 build_arg_defaults:
-  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-23/ee-minimal-rhel8'
 
 dependencies:
   galaxy: requirements.yml
@@ -10,9 +10,3 @@ dependencies:
   system: bindep.txt
 
 ansible_config: '../ansible.cfg'
-
-additional_build_steps:
-  prepend: |
-    RUN pip3 install --upgrade pip
-  # append:
-  #   - RUN pip3 install --upgrade ansible-lint
