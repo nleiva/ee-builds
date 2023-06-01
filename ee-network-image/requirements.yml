@@ -1,0 +1,29 @@
+collections:
+  - name: cisco.asa
+    version: 4.0.0
+  - name: cisco.ios
+    version: 4.4.0
+  - name: cisco.nxos
+    version: 4.1.0
+  - name: cisco.iosxr
+    version: 5.0.0
+  - name: arista.eos
+    version: 6.0.0
+  - name: junipernetworks.junos
+    version: 5.0.0
+  - name: cisco.meraki
+    version: 2.15.1
+  - name: netbox.netbox
+    version: 3.11.0
+  - name: paloaltonetworks.panos
+    version: 2.13.2
+  - name: f5networks.f5_bigip
+    version: 1.13.0
+  - name: ansible.netcommon
+    version: 5.0.0
+  - name: ansible.utils
+    version: 2.9.0
+  - name: ansible.posix
+    version: 1.5.1
+  - name: community.general
+    version: 6.4.0
