@@ -69,7 +69,7 @@ jobs:
 
       - name: Set up VERSION for container tag
         run: |
-          echo EE_VERSION=$(grep version ${{ inputs.EE_FOLDER_NAME }}/execution-environment.yml | awk '{print $2}') >> $GITHUB_ENV
+          echo EE_VERSION=$(grep '#image_version' ${{ inputs.EE_FOLDER_NAME }}/execution-environment.yml | awk '{print $2}') >> $GITHUB_ENV
 
       - name: Build image
         id: build-image

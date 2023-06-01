@@ -1,3 +1,0 @@
-pyats[library]
-genie
-ansible-pylibssh
