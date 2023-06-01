@@ -6,9 +6,13 @@ images:
   base_image:
     name: registry.redhat.io/ansible-automation-platform-23/ee-minimal-rhel8:latest
 
+additional_build_files:
+  - src: ansible.cfg
+    dest: configs
+
 additional_build_steps:
   prepend_galaxy:
-    - ADD ansible.cfg ~/.ansible.cfg
+    - ADD _build/configs/ansible.cfg ~/.ansible.cfg
 
 dependencies:
   galaxy:
