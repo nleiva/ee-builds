@@ -2,11 +2,11 @@ collections:
   - name: cisco.asa
     version: 4.0.0
   - name: cisco.ios
-    version: 4.4.0
+    version: 4.5.0
   - name: cisco.nxos
-    version: 4.1.0
+    version: 4.4.0
   - name: cisco.iosxr
-    version: 5.0.0
+    version: 5.0.3
   - name: arista.eos
     version: 6.0.0
   - name: junipernetworks.junos
