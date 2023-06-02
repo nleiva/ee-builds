@@ -1,3 +1,4 @@
 pyats[library]
 genie
 ansible-pylibssh
+ntc_template
