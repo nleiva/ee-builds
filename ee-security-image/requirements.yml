@@ -1,15 +1,17 @@
 collections:
   - name: community.general
-    version: 5.2.0
+    version: 7.1.0
   - name: check_point.mgmt
-    version: 2.3.0
+    version: 5.1.1
   - name: cisco.asa
-    version: 3.0.0
+    version: 4.0.1
   - name: cisco.ise
     version: 2.4.1
   - name: ansible.netcommon
-    version: 3.0.1
+    version: 5.0.0
   - name: f5networks.f5_modules
-    version: 1.16.0
+    version: 1.25.0
+  - name: paloaltonetworks.panos
+    version: 2.13.2
   - name: f5networks.f5_bigip
-    version: 1.7.0
+    version: 1.13.0
