@@ -1,5 +1,5 @@
-pyats
-genie
 ansible-pylibssh
+pyats[full]
+genie
 ntc-templates
 nmap
