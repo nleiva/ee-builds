@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - 'ee-network-image-community/**'
+      - 'ee-network-community/**'
 
   # Schedule workflow run at 01:00 on Sunday
   schedule:
@@ -22,7 +22,7 @@ jobs:
   call-deploy-workflow:
     uses:  nleiva/ee-builds/.github/workflows/deploy.yml@master
     with:
-      EE_FOLDER_NAME: 'ee-network-image-community'
+      EE_FOLDER_NAME: 'ee-network-community'
       EE_IMAGE_TAG: 'latest'
       QUAY_USER: 'nleiva'
     secrets:
