@@ -2,4 +2,4 @@ ansible-pylibssh
 #pyats[full]
 #genie
 ntc-templates
-nmap
+python-nmap
