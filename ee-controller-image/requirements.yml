@@ -1,6 +1,6 @@
 collections:
   - name: ansible.controller
-    version: 4.3.0
+    version: 4.4.0
   - name: infra.aap_utilities
     version: 2.2.4
   - name: infra.ah_configuration
