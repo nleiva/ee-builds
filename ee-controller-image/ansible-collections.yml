@@ -1,6 +1,6 @@
 collections:
-  - name: ansible.controller
-    version: 4.4.2
+  # - name: ansible.controller
+  #   version: 4.4.0
   - name: infra.ah_configuration
     version: 2.0.1
   - name: infra.controller_configuration
