@@ -1,5 +1,0 @@
-git [platform:rpm]
-rsync [platform:rpm]
-unzip [platform:rpm]
-tar [platform:rpm]
-sudo [platform:rpm]

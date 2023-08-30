@@ -1,0 +1,104 @@
+# Workflow name
+name: EE build v3
+
+# Controls when the workflow will run
+on:
+  # This is a reusable workflow
+  workflow_call:
+    inputs:
+      EE_FOLDER_NAME:
+        description: 'name of the folder where the EE is located (will become the name of the EE)'
+        default: ''
+        required: true
+        type: string
+      EE_IMAGE_TAG:
+        description: 'just one tag for image build'
+        default: 'latest'
+        required: true
+        type: string
+      QUAY_USER:
+        description: 'this is used during the image push to quay'
+        required: true
+        type: string
+    secrets:
+      REDHAT_PASSWORD:
+        description: 'needed for registry login'
+        required: false
+      REDHAT_USERNAME:
+        description: 'needed for registry login'
+        required: false
+      QUAY_PASSWORD:
+        description: 'needed for quay login'
+        required: false
+      AH_TOKEN:
+        description: 'API token for hosted automation hub'
+        required: false
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+    environment: deploy
+    steps:
+
+      # In this job, all steps begin with a name
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install Python packages
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Log in to registry.redhat.io
+        id: registry-redhat
+        uses: redhat-actions/podman-login@v1
+        with:
+          registry: registry.redhat.io
+          username: ${{ secrets.REDHAT_USERNAME }}
+          password: ${{ secrets.REDHAT_PASSWORD }}
+
+      - name: Substitute token for Automation Hub
+        id: ah-token
+        run: |
+          sed -i "s/my_token/$AH_TOKEN/1" ansible.cfg
+        env:
+          AH_TOKEN: ${{ secrets.AH_TOKEN }}
+
+      - name: Set up VERSION for container tag
+        run: |
+          echo EE_VERSION=$(grep '#image_version' ${{ inputs.EE_FOLDER_NAME }}/execution-environment.yml | awk '{print $2}') >> $GITHUB_ENV
+
+      - name: Build image
+        id: build-image
+        working-directory: ${{ inputs.EE_FOLDER_NAME }}
+        run: |
+          ansible-builder build -v 3 \
+          --build-arg AH_TOKEN=${{ secrets.AH_TOKEN }} \
+          --context=../${{ inputs.EE_FOLDER_NAME }} \
+          --tag=${{ inputs.EE_FOLDER_NAME }}:${{ inputs.EE_IMAGE_TAG }} \
+          --tag=${{ inputs.EE_FOLDER_NAME }}:${{ env.EE_VERSION }}
+
+      - name: Log in to quay.io
+        id: registry-quay
+        uses: redhat-actions/podman-login@v1
+        with:
+          registry: quay.io
+          username: ${{ inputs.QUAY_USER }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+
+      - name: Push to quay.io
+        id: push-to-quay
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ inputs.EE_FOLDER_NAME }}
+          tags: |
+            ${{ inputs.EE_IMAGE_TAG }}
+            ${{ env.EE_VERSION }}
+          registry: quay.io/${{ inputs.QUAY_USER }}/
+
+      - name: Print image URL
+        run: |
+          echo "Image pushed to ${{ steps.push-to-quay.outputs.registry-paths }}"
