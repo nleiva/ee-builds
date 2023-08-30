@@ -1,15 +1,11 @@
 collections:
   - name: ansible.controller
-    version: 4.4.0
-  - name: infra.aap_utilities
-    version: 2.2.4
+    version: 4.4.2
   - name: infra.ah_configuration
-    version: 1.1.1
+    version: 2.0.1
   - name: infra.controller_configuration
-    version: 2.3.0
+    version: 2.5.0
   - name: infra.ee_utilities
-    version: 2.0.7
-  - name: ansible.eda
-    version: 1.4.2
+    version: 2.1.2
   - name: community.general
     version: 7.1.0
