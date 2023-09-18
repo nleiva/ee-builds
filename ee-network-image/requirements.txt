@@ -1,4 +1,3 @@
-pyats[library]
-genie
+pyats
 ansible-pylibssh
 ntc-templates
