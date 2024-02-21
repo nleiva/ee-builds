@@ -1,41 +1,8 @@
 collections:
-  - name: ansible.netcommon
-    version: 5.1.2
   - name: ansible.posix
     version: 1.5.4
   - name: ansible.utils
-    version: 2.10.3
+    version: 3.1.0
   - name: community.general
-    version: 7.1.0
-  - name: community.network
-    version: 5.0.0
-  - name: community.yang
-    version: 1.1.0
-  - name: arista.avd
-    version: 4.1.0
-  - name: arista.cvp
-    version: 3.6.1
-  - name: arista.eos
-    version: 6.0.1
-  - name: cisco.aci
-    version: 2.6.0
-  - name: cisco.asa
-    version: 4.0.1
-  - name: cisco.dnac
-    version: 6.7.3
-  - name: cisco.ios
-    version: 5.0.0
-  - name: cisco.iosxr
-    version: 6.0.0
-  - name: cisco.meraki
-    version: 2.15.2
-  - name: cisco.nxos
-    version: 5.1.0
-  - name: f5networks.f5_bigip
-    version: 1.13.0
-  - name: junipernetworks.junos
-    version: 5.2.0
-  - name: netbox.netbox
-    version: 3.13.0
-  - name: paloaltonetworks.panos
-    version: 2.13.2
+    version: 8.3.0
+ 

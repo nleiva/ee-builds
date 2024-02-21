@@ -1,6 +1,1 @@
-ansible-pylibssh
-#pyats[full]
-#genie
-ntc-templates
-python-nmap
 libdnf5
