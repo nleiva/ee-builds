@@ -3,3 +3,4 @@ ansible-pylibssh
 #genie
 ntc-templates
 python-nmap
+libdnf5
